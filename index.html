@@ -1,0 +1,43 @@
+<!DOCTYPE html>
+<!--[if lt IE 7]>      <html class="no-js lt-ie9 lt-ie8 lt-ie7"> <![endif]-->
+<!--[if IE 7]>         <html class="no-js lt-ie9 lt-ie8"> <![endif]-->
+<!--[if IE 8]>         <html class="no-js lt-ie9"> <![endif]-->
+<!--[if gt IE 8]><!--> <html class="no-js"> <!--<![endif]-->
+    <head>
+        <meta charset="utf-8">
+        <meta http-equiv="X-UA-Compatible" content="IE=edge">
+        <title>Password Checker</title>
+        <meta name="description" content="">
+        <meta name="viewport" content="width=device-width, initial-scale=1">
+        <link rel="stylesheet" href="style.css">
+    </head>
+    <body>
+            <div class="container">
+                    <h3><b>Password Checker</b></h3>
+                    <label for="psw">Password</label>
+                    <input type="password" id="psw" name="psw" pattern="(?=.*\d)(?=.*[a-z])(?=.*[A-Z]).{8,}" title="Must contain at least one number and one uppercase and lowercase letter, and at least 8 or more characters" required>
+                  
+                    <!-- <input type="submit" value="Submit">-->
+                    </form>
+            </div>
+                  
+            <div id="message">
+                    <h3>Password must contain the following:</h3>
+                    <p id="oneVowel" class="invalid">It must contain <b>at least one vowel.</b></p>
+                    <p id="threeConsecutive" class="invalid">It can't contain <b>three consecutive vowels or consonants.</b></p>
+                    <p id="twoConsecutive" class="invalid">It cannot contain two consecutive occurrences of the same letter, <b>except for 'ee' or 'oo'.</b></p>
+                   <!--<p id="length" class="invalid">It should be <b>8 characters long.</b></p>--> 
+            </div>
+
+            <div class="container" id="uploadFile">
+                    <label for="filename">Upload File</label>
+                    <input type="file" id="myFile" name="myFile" required>
+            </div>
+            <div id="results">
+
+            </div>
+
+        
+        <script src="main.js" async defer></script>
+    </body>
+</html>
